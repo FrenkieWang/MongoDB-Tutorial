@@ -51,10 +51,10 @@
             var currentEditingModuleId = null; // Make sure to edit only one module
             refreshModules(); // Refresh Modules when Browser loaded
 
-            // [Path 1 - Get] -- Get all Modules - 'http://localhost:5000/modules/get'
+            // [Path 1 - Get] -- Get all Modules - 'https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/get'
             function refreshModules() {
                 let xhr = new XMLHttpRequest();
-                xhr.open('GET', 'http://localhost:5000/modules/get', true);
+                xhr.open('GET', 'https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/get', true);
                 xhr.send();
                 xhr.onerror = function() {
                     console.error('Network error');
@@ -86,7 +86,7 @@
                 };
             }
 
-            // [Path 2 - POST] -- Create a Module - 'http://localhost:5000/modules/create'
+            // [Path 2 - POST] -- Create a Module - 'https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/create'
             document.getElementById('createModuleButton').addEventListener('click', function(event) {
                 event.preventDefault(); 
 
@@ -99,7 +99,7 @@
                 console.log(module); 
             
                 let xhr = new XMLHttpRequest();
-                xhr.open('POST', 'http://localhost:5000/modules/create', true);
+                xhr.open('POST', 'https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/create', true);
                 xhr.setRequestHeader('Content-Type', 'application/json'); // Data Type to be sent: JSON   
                 xhr.send(JSON.stringify(module));  // JSON -> String    
                 xhr.onerror = function() {
@@ -115,12 +115,12 @@
                 };
             });    
             
-            // [Path 3 - GET] -- Get a Module - 'http://localhost:5000/modules/get/:moduleId'
+            // [Path 3 - GET] -- Get a Module - 'https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/get/:moduleId'
             window.editModule = function(moduleId) {             
                 currentEditingModuleId = moduleId;  // Change current Editing ModuleId   
             
                 let xhr = new XMLHttpRequest();
-                xhr.open('GET', `http://localhost:5000/modules/get/${currentEditingModuleId}`, true);
+                xhr.open('GET', `https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/get/${currentEditingModuleId}`, true);
                 xhr.send();
                 xhr.onerror = function() {
                     console.error('Network error');
@@ -142,7 +142,7 @@
                 };
             };
 
-            // [Path 4 - PUT] -- Update a Module - 'http://localhost:5000/modules/update/:moduleId'
+            // [Path 4 - PUT] -- Update a Module - 'https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/update/:moduleId'
             document.getElementById('editModuleButton').addEventListener('click',  function(event) {
                 event.preventDefault();
 
@@ -154,7 +154,7 @@
                 });
 
                 let xhr = new XMLHttpRequest();
-                xhr.open('PUT', `http://localhost:5000/modules/update/${currentEditingModuleId}`, true);
+                xhr.open('PUT', `https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/update/${currentEditingModuleId}`, true);
                 xhr.setRequestHeader('Content-Type', 'application/json'); // Data Type to be sent: JSON 
                 xhr.send(JSON.stringify(module));
                 xhr.onerror = function() {
@@ -174,10 +174,10 @@
                 };       
             });
 
-            // [Path 5 -- DELETE] -- Delete a Module - 'http://localhost:5000/modules/delete/:modulId'
+            // [Path 5 -- DELETE] -- Delete a Module - 'https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/delete/:modulId'
             window.deleteModule = function(moduleId) {
                 let xhr = new XMLHttpRequest();
-                xhr.open('DELETE', `http://localhost:5000/modules/delete/${moduleId}`, true);   
+                xhr.open('DELETE', `https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app//modules/delete/${moduleId}`, true);   
                 xhr.send();
                 xhr.onerror = function() {
                     console.error('Network error');
