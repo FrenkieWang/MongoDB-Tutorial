@@ -29,8 +29,15 @@ const server = http.createServer((request, response) => {
   const path = URL.pathname;
   console.log(path);
 
+  // [Path 0 - GET] -- Default path to show deployment success
+  if (path === '/' && request.method === 'GET') {
+    response.writeHead(200, { 'Content-Type': 'application/json' });
+    response.end(JSON.stringify({ message: "You have successfully deployed your application!" }));
+    return;
+  }
+
   // [Path 1 - Get] -- Get all Modules,  path === '/modules/get'
-  if (path === '/modules/get' && request.method === 'GET') {
+  else if (path === '/modules/get' && request.method === 'GET') {
     // [MongoDB Method] - Get all Modules
     client.db('myDatabase').collection('modules').find().toArray()
       .then(results => {
