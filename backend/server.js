@@ -2,9 +2,11 @@ const { MongoClient, ObjectId } = require('mongodb'); // npm install mongodb
 const http = require('http');
 const url = require('url');
 
+require('dotenv').config();
+
 // Remember to fill in your Password and Database Name!
-const ATLAS_URI = "mongodb+srv://frenkiewang21:afdkjpxx124@mongotutorial.qkegqpd.mongodb.net/myDatabase?retryWrites=true&w=majority&appName=MongoTutorial";
-const client = new MongoClient(ATLAS_URI); 
+const uri = process.env.ATLAS_URI;
+const client = new MongoClient(uri); 
 client.connect()    
   .then(() => console.log('Connected to MongoDB'))
   .catch(() => console.log('MongoDB failed to connect:'));
@@ -152,7 +154,7 @@ const server = http.createServer((request, response) => {
 }); // end of http.createServer 
 
 // Server listen to the PORT => http://localhost:5000
-const port = 5000;
+const port = process.env.PORT;
 server.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
