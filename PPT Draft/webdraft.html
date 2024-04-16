@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maynooth Module Management</title>
+    <style>
+        /* CSS File */
+    </style>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+<body>
+    <div class = "app">
+        <h3>CRUD for Maynooth Module</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Module ID</th>
+                    <th>Module Code</th>
+                    <th>Module Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="moduleList">
+                <!-- Modules will be loaded here by JavaScript -->
+            </tbody>
+        </table>
+
+        <h3>Module Submit Form</h3>
+        <form id="moduleForm">
+            <div class="form-group"> <!-- Input Item -->
+                <label>Module Code:</label>
+                <input type="text" name="code" required>
+            </div>
+            <div class="form-group">
+                <label>Module Name:</label>
+                <input type="text" name="moduleName" required>
+            </div>
+            <div class="form-group"> <!-- Button Controller -->
+                <button type="button" id="createModuleButton">Create Module</button>
+            </div>
+        </form>       
+    </div> <!-- END of APP -->
+
+    <script src="./script.js">
+        // JavaScript
+    </script> 
+</body>
+</html>

@@ -1,0 +1,5 @@
+OPTIONS /modules/create HTTP/1.1
+Host: localhost:5000
+Origin: .../frontend.html
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: Content-Type
