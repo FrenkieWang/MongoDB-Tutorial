@@ -1,4 +1,5 @@
 Backend:
-https://mongo-db-tutorial-c4mmcq9ha-frenkie-wangs-projects.vercel.app/
+https://mongo-db-tutorial-backend.vercel.app/
 
 Frontend:
+https://mongo-db-tutorial-frontend.vercel.app/
