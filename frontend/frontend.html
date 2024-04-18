@@ -169,6 +169,9 @@
                         // Disable edit <button>, enable create <button>
                         document.getElementById('editModuleButton').disabled = true;
                         document.getElementById('createModuleButton').disabled = false;
+
+                        // Clear the form data
+                        document.getElementById('moduleForm').reset();
                     } else {
                         console.log('Failed to Edit Module:', this.statusText);
                     }

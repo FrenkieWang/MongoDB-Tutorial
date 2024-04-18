@@ -116,13 +116,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(`Module updated successfully!`);
                 refreshModules(); // Refresh <table> after UPDATE
 
-                // Clear the Form Data
-                moduleForm.elements['code'].value = "";
-                moduleForm.elements['moduleName'].value = "";
-
                 // Disable edit <button>, enable create <button>
                 document.getElementById('editModuleButton').disabled = true;
                 document.getElementById('createModuleButton').disabled = false;
+
+                // Clear the form data
+                document.getElementById('moduleForm').reset();
             } else {
                 console.log('Failed to Edit Module:', this.statusText);
             }
