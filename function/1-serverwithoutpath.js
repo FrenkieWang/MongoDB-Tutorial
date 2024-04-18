@@ -1,7 +1,7 @@
 const { MongoClient, ObjectId } = require('mongodb'); // npm install mongodb
 const http = require('http');
 
-const ATLAS_URI = "mongodb+srv://frenkiewang21:afdkjpxx124@mongotutorial.qkegqpd.mongodb.net/myDatabase?retryWrites=true&w=majority&appName=MongoTutorial";
+const ATLAS_URI = "";
 const client = new MongoClient(ATLAS_URI);
 
 client.connect()
