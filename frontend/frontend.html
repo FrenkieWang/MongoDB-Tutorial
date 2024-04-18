@@ -166,10 +166,6 @@
                         console.log(`Module updated successfully!`);
                         refreshModules(); // Refresh <table> after UPDATE
 
-                        // Clear the Form Data
-                        moduleForm.elements['code'].value = "";
-                        moduleForm.elements['moduleName'].value = "";
-
                         // Disable edit <button>, enable create <button>
                         document.getElementById('editModuleButton').disabled = true;
                         document.getElementById('createModuleButton').disabled = false;
