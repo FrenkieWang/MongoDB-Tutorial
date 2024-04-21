@@ -1,4 +1,4 @@
-const { MongoClient, ObjectId } = require('mongodb'); // npm install mongodb
+const { MongoClient, ObjectId } = require('mongodb');
 const http = require('http');
 const url = require('url');
 
